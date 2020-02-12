@@ -17,6 +17,7 @@ export class ProductsGridComponent implements OnInit {
   ngOnInit() {
     this.service.getProductsData().subscribe((res: Response) => {
       this.productData = res;
+      console.log(res);
     });  
   }    
 
