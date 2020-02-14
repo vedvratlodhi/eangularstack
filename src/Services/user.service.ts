@@ -10,8 +10,8 @@ export class UserService {
 
   constructor(private htpp: HttpClient) { }
 
-  checkUser() {
-
+  checkUser(email: string, password: string) {
+    return this.htpp.get("http://10.71.13.21:2000/api/checkuser/" + email + "/" + password, { observe: 'response' }) ;
   }
 
   addUser(user: User): Observable<User>{

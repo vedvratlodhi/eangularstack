@@ -1,0 +1,28 @@
+<h2>User Login</h2>
+<div>
+  <form #loginForm="ngForm" (ngSubmit)="checkUser(loginForm)">
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" ngModel name="email" #email="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+        <div *ngIf="email.errors.required">Email is required.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" ngModel name="password" #password="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+        <div *ngIf="password.errors.required">Password is required.</div>
+      </div>
+    </div>
+
+    <div class="alert alert-danger" *ngIf = "!isUserValid">
+      Invalid user credentials
+    </div>
+
+    <button class="btn btn-primary" type="submit" [class.disabled]="!loginForm.valid">Login</button>
+
+  </form> 
+</div>
