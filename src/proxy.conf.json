@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://www.mocky.io/v2",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

@@ -24,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -70,7 +69,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ProductsManagement:build"
+            "browserTarget": "ProductsManagement:build",
+             "proxyConfig": "src/proxy.conf.json"
           }
         },
         "test": {

@@ -7,7 +7,7 @@ import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component
 
 
 import { ProductsGridComponent } from './products-grid/products-grid.component';
-
+import { UserLoginComponent } from './user-login/user-login.component';
 
 const appRoutes: Routes = [
     
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     
 
     //no layout routes
-    // { path: 'login', component: LoginComponent},
+     { path: 'login', component: UserLoginComponent},
     // { path: 'register', component: RegisterComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
