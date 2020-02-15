@@ -11,7 +11,7 @@ import { ProductsGridComponent } from './products-grid/products-grid.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 
 
-import { UserService } from 'src/Services/user.service';
+import { UserService } from '../Services/user.service';
 import { ProductsService } from '../Services/productservice';
 
 
