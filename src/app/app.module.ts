@@ -13,8 +13,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
 
 import { UserService } from '../Services/user.service';
 import { ProductsService } from '../Services/productservice';
-
-
+import {UserRegistrationComponent} from './user-registration/user-registration.component';
+import {ProductRegistrationComponent} from './product-registration/product-registration.component';
 
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 import { SiteHeaderComponent } from './_layout/site-header/site-header.component';
@@ -30,6 +30,8 @@ import { routing } from './app.routing';
     AppComponent,
     ProductsGridComponent,
     UserLoginComponent,
+    UserRegistrationComponent,
+    ProductRegistrationComponent,
     SiteLayoutComponent,
     SiteHeaderComponent,
     SiteFooterComponent

@@ -1,0 +1,43 @@
+<h2>User Registration</h2>
+<div>
+  <form #registrationForm="ngForm" (ngSubmit)="checkUser(registrationForm)">
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" ngModel name="email" #email="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+        <div *ngIf="email.errors.required">Email is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" ngModel name="firstName" #firstName="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors.required">First Name is required.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" ngModel name="lastName" #lastName="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+        <div *ngIf="lastName.errors.required">First Name is required.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" ngModel name="password" #password="ngModel" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+        <div *ngIf="password.errors.required">Password is required.</div>
+      </div>
+    </div>
+
+    <div class="alert alert-danger" *ngIf = "!isUserValid">
+      Invalid user credentials
+    </div>
+
+    <button class="btn btn-primary" type="submit" [class.disabled]="!registrationForm.valid">Register</button>
+
+  </form> 
+</div>

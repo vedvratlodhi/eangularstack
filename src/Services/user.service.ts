@@ -15,6 +15,8 @@ export class UserService {
   }
 
   addUser(user: User): Observable<User>{
+    alert(user);
+    console.log(user);
     return this.htpp.post<User>('http://10.71.13.21:2000/api/adduser/', user, {
       headers: new HttpHeaders({
         'Content-Type' : 'application/json'
